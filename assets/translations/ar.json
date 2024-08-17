@@ -28,5 +28,8 @@
   "pleaseSelectTime": "يرجى اختيار وقت",
   "bookAppointment": "حجز موعد",
   "appointmentBookedSuccessfully": "تم حجز الموعد بنجاح!",
-  "ok": "موافق"
+  "ok": "موافق",
+  "currency": "ج.م",
+  "on_demand": "حسب الطلب"
+
 }

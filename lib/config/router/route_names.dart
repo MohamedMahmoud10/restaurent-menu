@@ -1,7 +1,8 @@
 class AppRouteNames{
 
   static const String home ='/';
-  static const String userHomeScreen ='/userHomeScreen';
+  static const String categories ='/categories';
+  static const String subCategoriesScreen ='subcategories';
   // static const String categoryScreen ='/categoryScreen';
   // static const String doctorsScreen ='/doctorsScreen';
   // static const String bookAppointmentScreen ='/bookAppointmentScreen';

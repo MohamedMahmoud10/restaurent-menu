@@ -13,7 +13,7 @@ class AppShimmerWidget extends StatelessWidget {
   const AppShimmerWidget({
     this.width,
     this.height,
-    this.color = AppColors.primary,
+    this.color = AppColors.sekeletonColor,
     this.borderRadius = BorderRadiusDirectional.zero,
     this.padding,
     this.margin,

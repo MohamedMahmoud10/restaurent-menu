@@ -31,5 +31,7 @@ abstract class  LocaleKeys {
   static const bookAppointment = 'bookAppointment';
   static const appointmentBookedSuccessfully = 'appointmentBookedSuccessfully';
   static const ok = 'ok';
+  static const currency = 'currency';
+  static const on_demand = 'on_demand';
 
 }

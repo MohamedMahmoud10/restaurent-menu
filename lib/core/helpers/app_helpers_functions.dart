@@ -1,7 +1,3 @@
-import 'dart:io';
-import 'package:firebase_storage/firebase_storage.dart';
-import 'package:path/path.dart' as path;
-import 'package:restaurent_digital_menu/core/utils/app_logger.dart';
 
 class AppHelpersFunctions {
   static final AppHelpersFunctions _singleton = AppHelpersFunctions.internal();
@@ -10,23 +6,6 @@ class AppHelpersFunctions {
 
   AppHelpersFunctions.internal();
 
-  Future<String?> uploadImageToFirebaseStorage({
-    required File? imageFile,
-    required FirebaseStorage dataBaseStorage,
-  }) async {
-    AppLogger().info('The Image Path Is $imageFile');
-    if (imageFile == null) {}
-    if (imageFile != null) {
-      final extractedImage =
-          extractLastFourDigitsAndExtension(path.basename(imageFile.path));
-      // Upload image to Firebase Storage
-      final userprofileRef = dataBaseStorage.ref().child(extractedImage);
-      final uploadedImage = await userprofileRef.putFile(imageFile);
-      String downloadUrl = await uploadedImage.ref.getDownloadURL();
-      return downloadUrl;
-    }
-    return null;
-  }
 
   // Function to extract last four digits and extension from file path
   String extractLastFourDigitsAndExtension(String filePath) {

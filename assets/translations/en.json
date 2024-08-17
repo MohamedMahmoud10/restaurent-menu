@@ -28,5 +28,8 @@
   "pleaseSelectTime": "Please select a time",
   "bookAppointment": "Book Appointment",
   "appointmentBookedSuccessfully": "Appointment Booked Successfully!",
-  "ok": "OK"
+  "ok": "OK",
+  "currency": "EGP",
+  "on_demand": "On Demand"
+
 }

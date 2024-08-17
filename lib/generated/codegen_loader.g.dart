@@ -44,7 +44,9 @@ class CodegenLoader extends AssetLoader{
   "pleaseSelectTime": "Please select a time",
   "bookAppointment": "Book Appointment",
   "appointmentBookedSuccessfully": "Appointment Booked Successfully!",
-  "ok": "OK"
+  "ok": "OK",
+  "currency": "EGP",
+  "on_demand": "On Demand"
 };
 static const Map<String,dynamic> ar = {
   "bookAndScheduleWithNearestDoctor": "احجز و\nجدول مواعيدك مع\n أقرب طبيب",
@@ -76,7 +78,9 @@ static const Map<String,dynamic> ar = {
   "pleaseSelectTime": "يرجى اختيار وقت",
   "bookAppointment": "حجز موعد",
   "appointmentBookedSuccessfully": "تم حجز الموعد بنجاح!",
-  "ok": "موافق"
+  "ok": "موافق",
+  "currency": "ج.م",
+  "on_demand": "حسب الطلب"
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"en": en, "ar": ar};
 }

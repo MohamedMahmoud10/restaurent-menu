@@ -58,4 +58,7 @@ class AppColors {
   static const Color softPink = Color(0xFFF7C9CC);
   static const Color pastelPink = Color(0xFFF6C8CB);
   static const Color blushPink = Color(0xFFF8CFD3);
-  static const Color rosyPink = Color(0xFFF8CED0);}
+  static const Color rosyPink = Color(0xFFF8CED0);
+
+  static const Color sekeletonColor = Colors.black12;
+}

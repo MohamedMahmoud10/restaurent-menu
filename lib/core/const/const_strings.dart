@@ -17,6 +17,6 @@ class ConstStrings {
 
 
 
-  static const String applicationName = 'Cairo esthetic center';
+  static const String applicationName = 'Bistro Lounge';
 
 }

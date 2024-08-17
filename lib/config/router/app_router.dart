@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:restaurent_digital_menu/config/router/route_names.dart';
+import 'package:restaurent_digital_menu/features/get_all_sub_category/presentation/screens/sub_categories_screen.dart';
+import 'package:restaurent_digital_menu/features/get_category/data/models/category_response_model.dart';
 import 'package:restaurent_digital_menu/features/home_screen/presentation/screens/user_home_screen.dart';
 
 GlobalKey<NavigatorState> navigationKey = GlobalKey<NavigatorState>();
 
 final appRouter = GoRouter(
-  initialLocation: AppRouteNames.userHomeScreen,
+  initialLocation: AppRouteNames.categories,
   navigatorKey: navigationKey,
   observers: [
     NavigatorObserver(),
@@ -115,11 +117,22 @@ final appRouter = GoRouter(
     //   builder: (context, state) => LoginScreen(),
     // ),
     GoRoute(
-      path: AppRouteNames.userHomeScreen,
-      name: AppRouteNames.userHomeScreen,
+      path: AppRouteNames.categories,
       builder: (context, state) => const UserHomeScreen(),
+      routes: [
+        GoRoute(
+          path: ':categoryId/${AppRouteNames.subCategoriesScreen}',
+          builder: (context, state) {
+            final CategoryResponseModel cats =
+                state.extra as CategoryResponseModel;
+            return SubCategoriesScreen(
+              categoryResponseModel: cats,
+              docId: state.pathParameters['categoryId']!.toString(),
+            );
+          },
+        ),
+      ],
     ),
-
 
     //      case AppRouteNames.userHomeScreen:
     //         return MaterialPageRoute(
