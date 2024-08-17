@@ -17,6 +17,7 @@ class UserHomeScreen extends StatelessWidget {
           StartFetch(),
         ),
       child: const Scaffold(
+        backgroundColor: Colors.white,
         body: UserHomeBody(),
       ),
     );

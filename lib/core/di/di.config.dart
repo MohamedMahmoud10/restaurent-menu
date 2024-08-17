@@ -9,11 +9,17 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:cloud_firestore/cloud_firestore.dart' as _i974;
-import 'package:firebase_auth/firebase_auth.dart' as _i59;
-import 'package:firebase_storage/firebase_storage.dart' as _i457;
 import 'package:get_it/get_it.dart' as _i174;
 import 'package:injectable/injectable.dart' as _i526;
 
+import '../../features/get_all_sub_category/data/remote/get_sub_category_details_remote_data_source.dart'
+    as _i904;
+import '../../features/get_all_sub_category/data/remote/get_sub_category_remote_data_source.dart'
+    as _i919;
+import '../../features/get_all_sub_category/data/repository/get_sub_category_details_repository.dart'
+    as _i131;
+import '../../features/get_all_sub_category/data/repository/get_sub_category_repository.dart'
+    as _i643;
 import '../../features/get_category/data/repository/category_repository.dart'
     as _i975;
 import 'register_module.dart' as _i291;
@@ -31,10 +37,19 @@ extension GetItInjectableX on _i174.GetIt {
     );
     final registerModule = _$RegisterModule();
     gh.lazySingleton<_i974.FirebaseFirestore>(() => registerModule.fireStore);
-    gh.lazySingleton<_i59.FirebaseAuth>(() => registerModule.firebaseAuth);
-    gh.lazySingleton<_i457.FirebaseStorage>(() => registerModule.storageRef);
+    gh.lazySingleton<_i904.GetSubCategoryDetailsRemoteDataSource>(() =>
+        _i904.GetSubCategoryDetailsRemoteDataSource(
+            gh<_i974.FirebaseFirestore>()));
+    gh.lazySingleton<_i919.GetSubCategoryRemoteDataSource>(() =>
+        _i919.GetSubCategoryRemoteDataSource(gh<_i974.FirebaseFirestore>()));
+    gh.lazySingleton<_i131.GetSubCategoryDetailsRepository>(() =>
+        _i131.GetSubCategoryDetailsRepository(
+            gh<_i904.GetSubCategoryDetailsRemoteDataSource>()));
     gh.lazySingleton<_i975.CategoryRepository>(
         () => _i975.CategoryRepository(gh<_i974.FirebaseFirestore>()));
+    gh.lazySingleton<_i643.GetSubCategoryRepository>(() =>
+        _i643.GetSubCategoryRepository(
+            gh<_i919.GetSubCategoryRemoteDataSource>()));
     return this;
   }
 }
