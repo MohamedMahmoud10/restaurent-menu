@@ -16,7 +16,7 @@ class AppBarView extends StatelessWidget {
     return Stack(
       alignment: Alignment.center,
       children: [
-        CachedNetworkImageProviderWidget(
+        NetworkImageProviderWidget(
           height: 150.h,
           colorFilter: ColorFilter.mode(
               Colors.black.withOpacity(0.4), BlendMode.darken),

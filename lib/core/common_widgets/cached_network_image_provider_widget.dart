@@ -3,8 +3,62 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:restaurent_digital_menu/core/common_widgets/animations/app_animated_shimmer_widget.dart';
 
-class CachedNetworkImageProviderWidget extends StatelessWidget {
-  const CachedNetworkImageProviderWidget({
+// class CachedNetworkImageProviderWidget extends StatelessWidget {
+//   const CachedNetworkImageProviderWidget({
+//     super.key,
+//     required this.imageUrl,
+//     this.width,
+//     this.height,
+//     this.fit = BoxFit.cover,
+//     this.borderRadius,
+//     this.child,
+//     this.colorFilter,
+//   });
+//
+//   final String imageUrl;
+//   final double? width;
+//   final double? height;
+//   final BoxFit fit;
+//   final BorderRadiusGeometry? borderRadius;
+//   final Widget? child;
+//   final ColorFilter? colorFilter;
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return CachedNetworkImage(
+//       imageUrl: imageUrl,
+//       imageBuilder: (context, imageProvider) => Container(
+//         width: width ?? 50.w,
+//         height: height ?? 50.h,
+//         decoration: BoxDecoration(
+//           borderRadius: borderRadius,
+//           image: DecorationImage(
+//             colorFilter:colorFilter,
+//             image: imageProvider,
+//             fit: fit,
+//           ),
+//         ),
+//         child: child,
+//       ),
+//       placeholder: (context, url) => AppShimmerWidget(
+//         width: width ?? 50.w,
+//         height: height ?? 50.h,
+//         borderRadius: borderRadius,
+//       ),
+//       errorWidget: (context, url, error) => Container(
+//         width: width ?? 50.w,
+//         height: height ?? 50.h,
+//         decoration: BoxDecoration(
+//           borderRadius: borderRadius,
+//         ),
+//         child: child,
+//       ),
+//     );
+//   }
+// }
+
+class NetworkImageProviderWidget extends StatelessWidget {
+  const NetworkImageProviderWidget({
     super.key,
     required this.imageUrl,
     this.width,
@@ -25,33 +79,37 @@ class CachedNetworkImageProviderWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CachedNetworkImage(
-      imageUrl: imageUrl,
-      imageBuilder: (context, imageProvider) => Container(
-        width: width ?? 50.w,
-        height: height ?? 50.h,
-        decoration: BoxDecoration(
-          borderRadius: borderRadius,
-          image: DecorationImage(
-            colorFilter:colorFilter,
-            image: imageProvider,
-            fit: fit,
-          ),
-        ),
-        child: child,
-      ),
-      placeholder: (context, url) => AppShimmerWidget(
-        width: width ?? 50.w,
-        height: height ?? 50.h,
+    return Container(
+      width: width ?? 50.w,
+      height: height ?? 50.h,
+      decoration: BoxDecoration(
         borderRadius: borderRadius,
       ),
-      errorWidget: (context, url, error) => Container(
-        width: width ?? 50.w,
-        height: height ?? 50.h,
-        decoration: BoxDecoration(
-          borderRadius: borderRadius,
+      child: ClipRRect(
+        borderRadius: borderRadius??BorderRadius.zero,
+        child: Image.network(
+          imageUrl,
+          fit: fit,
+          loadingBuilder: (context, child, loadingProgress) {
+            if (loadingProgress == null) {
+              return child;
+            } else {
+              return AppShimmerWidget(
+                width: width ?? 50.w,
+                height: height ?? 50.h,
+                borderRadius: borderRadius,
+              );
+            }
+          },
+          errorBuilder: (context, error, stackTrace) => Container(
+            width: width ?? 50.w,
+            height: height ?? 50.h,
+            decoration: BoxDecoration(
+              borderRadius: borderRadius,
+            ),
+            child: child ?? Icon(Icons.error, size: 24.sp),
+          ),
         ),
-        child: child,
       ),
     );
   }
