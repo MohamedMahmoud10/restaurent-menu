@@ -1,4 +1,5 @@
 
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/cupertino.dart';
@@ -17,6 +18,7 @@ class AppInit {
 
   Future<void> beforeAppInit() async {
     WidgetsFlutterBinding.ensureInitialized();
+    CachedNetworkImage.logLevel = CacheManagerLogLevel.debug;
     await ScreenUtil.ensureScreenSize();
     await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
     configureDependencies();

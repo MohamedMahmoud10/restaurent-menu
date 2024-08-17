@@ -54,8 +54,8 @@ class CategoryView extends StatelessWidget {
           CachedNetworkImageProviderWidget(
             // colorFilter: ColorFilter.mode(
             //     Colors.black.withOpacity(0.4), BlendMode.darken),
-            // imageUrl: categoryResponseModel.imageUrl,
-            imageUrl: 'https://via.placeholder.com/300',
+            imageUrl: categoryResponseModel.imageUrl,
+            // imageUrl: 'https://via.placeholder.com/300',
             borderRadius: borderRadius,
           ),
           Text(
