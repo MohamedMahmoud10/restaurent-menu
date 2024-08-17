@@ -51,12 +51,12 @@ class CategoryView extends StatelessWidget {
         alignment: Alignment.center,
         fit: StackFit.expand,
         children: [
-          CachedNetworkImageProviderWidget(
-            colorFilter: ColorFilter.mode(
-                Colors.black.withOpacity(0.4), BlendMode.darken),
-            imageUrl: categoryResponseModel.imageUrl,
-            borderRadius: borderRadius,
-          ),
+          // CachedNetworkImageProviderWidget(
+          //   // colorFilter: ColorFilter.mode(
+          //   //     Colors.black.withOpacity(0.4), BlendMode.darken),
+          //   imageUrl: categoryResponseModel.imageUrl,
+          //   borderRadius: borderRadius,
+          // ),
           Text(
             categoryResponseModel.name(context.locale.languageCode),
             style: Theme.of(context).textTheme.labelSmall!.copyWith(
