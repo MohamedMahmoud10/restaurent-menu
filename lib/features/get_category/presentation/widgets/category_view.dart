@@ -51,7 +51,7 @@ class CategoryView extends StatelessWidget {
         alignment: Alignment.center,
         fit: StackFit.expand,
         children: [
-          NetworkImageProviderWidget(
+          CachedNetworkImageProviderWidget(
             // colorFilter: ColorFilter.mode(
             //     Colors.black.withOpacity(0.4), BlendMode.darken),
             imageUrl: categoryResponseModel.imageUrl,

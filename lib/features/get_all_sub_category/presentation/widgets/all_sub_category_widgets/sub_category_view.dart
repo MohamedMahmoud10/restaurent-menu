@@ -17,7 +17,7 @@ class SubCategoryView extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        NetworkImageProviderWidget(
+        CachedNetworkImageProviderWidget(
           imageUrl: subCategoryResponseModel.imageUrl,
           width: 200.w,
           height: 200.h,
