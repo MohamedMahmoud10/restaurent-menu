@@ -15,7 +15,6 @@ class CachedNetworkImageProviderWidget extends StatelessWidget {
     this.child,
     this.colorFilter,
   });
-
   final String imageUrl;
   final double? width;
   final double? height;
@@ -23,7 +22,6 @@ class CachedNetworkImageProviderWidget extends StatelessWidget {
   final BorderRadiusGeometry? borderRadius;
   final Widget? child;
   final ColorFilter? colorFilter;
-
   @override
   Widget build(BuildContext context) {
     return CachedNetworkImage(
