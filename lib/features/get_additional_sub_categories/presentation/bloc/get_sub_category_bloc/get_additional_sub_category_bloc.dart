@@ -39,6 +39,7 @@ class GetAdditionalSubCategoryBloc
     String docId,
   ) async {
     emit(GetAdditionalSubCategoryState.getAdditionalSubCategoryLoadingState());
+    await Future.delayed(const Duration(seconds: 4));
     await _subscription?.cancel();
     final result =
         await _repository.getAllCategories(mainDocId: mainDocId, docId: docId);
