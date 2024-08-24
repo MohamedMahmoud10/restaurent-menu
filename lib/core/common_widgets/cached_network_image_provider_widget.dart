@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
+import 'package:restaurent_digital_menu/core/assets/app_logos.dart';
 import 'package:restaurent_digital_menu/core/common_widgets/animations/app_animated_shimmer_widget.dart';
 
 class CachedNetworkImageProviderWidget extends StatelessWidget {
@@ -14,6 +15,7 @@ class CachedNetworkImageProviderWidget extends StatelessWidget {
     this.child,
     this.colorFilter,
     this.backGroundColor,
+    this.isThirdScreen = false,
   });
 
   final String imageUrl;
@@ -24,6 +26,7 @@ class CachedNetworkImageProviderWidget extends StatelessWidget {
   final Widget? child;
   final ColorFilter? colorFilter;
   final Color? backGroundColor;
+  final bool? isThirdScreen;
 
   @override
   Widget build(BuildContext context) {
@@ -56,7 +59,7 @@ class CachedNetworkImageProviderWidget extends StatelessWidget {
           borderRadius: borderRadius,
           color: backGroundColor,
         ),
-        child: child,
+        child: isThirdScreen!?Image.asset(AppLogos.backGroundImage):child,
       ),
     );
   }

@@ -15,7 +15,6 @@ class GetSubCategoryBloc extends Bloc<GetSubCategoryEvent, GetSubCategoryState> 
         await event.when(startFetch: (docId) async {
           emit(const GetSubCategoryState.loadingState());
           await Future.delayed(const Duration(seconds: 4));
-
           final result = await _repository.getAllCategories(docId:docId);
           result.when(
                 (success) => emit(

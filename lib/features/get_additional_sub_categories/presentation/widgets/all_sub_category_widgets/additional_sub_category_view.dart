@@ -8,17 +8,18 @@ import 'package:restaurent_digital_menu/features/get_additional_sub_categories/d
 import 'package:restaurent_digital_menu/generated/locale_keys.g.dart';
 
 class AdditionalSubCategoryView extends StatelessWidget {
-  const AdditionalSubCategoryView({super.key, required this.subCategoryResponseModel});
+  const AdditionalSubCategoryView(
+      {super.key, required this.subCategoryResponseModel});
 
   final AdditionalSubCategoryResponseModel subCategoryResponseModel;
 
   @override
   Widget build(BuildContext context) {
-    final description = subCategoryResponseModel.description(context.locale.languageCode);
+    final description =
+        subCategoryResponseModel.description(context.locale.languageCode);
 
     return Container(
       width: 40.w,
-
       decoration: ShapeDecoration(
         color: AppColors.white,
         shape: RoundedRectangleBorder(
@@ -35,8 +36,9 @@ class AdditionalSubCategoryView extends StatelessWidget {
       child: Row(
         children: [
           Padding(
-            padding:  EdgeInsets.symmetric(vertical: 3.0.h,horizontal: 3.w),
+            padding: EdgeInsets.symmetric(vertical: 3.0.h, horizontal: 3.w),
             child: CachedNetworkImageProviderWidget(
+              isThirdScreen: true,
               borderRadius: BorderRadius.circular(16),
               imageUrl: subCategoryResponseModel.imageUrl ?? '',
               width: 25.w,
@@ -48,28 +50,28 @@ class AdditionalSubCategoryView extends StatelessWidget {
           ),
           Expanded(
             child: Padding(
-              padding:  EdgeInsets.symmetric(vertical: 1.2.h,horizontal: 1.2.w),
+              padding: EdgeInsets.symmetric(vertical: 1.2.h, horizontal: 1.2.w),
               child: Column(
                 children: [
                   Text(
                     subCategoryResponseModel.name(context.locale.languageCode),
                     style: Theme.of(context).textTheme.displayLarge!.copyWith(
-                      fontWeight: AppDimensions.semiBold,
-                      fontSize: 22.sp,
-                      color: AppColors.textBlack,
-                      height: 1.6,
-                    ),
+                          fontWeight: AppDimensions.semiBold,
+                          fontSize: 22.sp,
+                          color: AppColors.textBlack,
+                          height: 1.6,
+                        ),
                   ),
                   SizedBox(height: 5.h),
                   if (description != null && description.isNotEmpty) ...[
                     Text(
                       description,
                       style: Theme.of(context).textTheme.displayLarge!.copyWith(
-                        fontWeight: AppDimensions.regular,
-                        fontSize: 20.sp,
-                        color: AppColors.textBlack,
-                        height: 1.4,
-                      ),
+                            fontWeight: AppDimensions.regular,
+                            fontSize: 20.sp,
+                            color: AppColors.textBlack,
+                            height: 1.4,
+                          ),
                     ),
                     SizedBox(height: 5.h),
                   ],
@@ -78,10 +80,10 @@ class AdditionalSubCategoryView extends StatelessWidget {
                         ? '${subCategoryResponseModel.price} ${LocaleKeys.currency.tr()}'
                         : LocaleKeys.on_demand.tr(),
                     style: Theme.of(context).textTheme.displayLarge!.copyWith(
-                      fontWeight: AppDimensions.semiBold,
-                      fontSize: 22.sp,
-                      color: AppColors.textBlack,
-                    ),
+                          fontWeight: AppDimensions.semiBold,
+                          fontSize: 22.sp,
+                          color: AppColors.textBlack,
+                        ),
                   ),
                 ],
               ),
