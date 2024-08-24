@@ -37,7 +37,10 @@ class AdditionalAppBarView extends StatelessWidget {
             Text(
               categoryResponseModel.name(context.locale.languageCode),
               style: Theme.of(context).textTheme.labelSmall!.copyWith(
-                    color: AppColors.white,
+                color: categoryResponseModel.imageUrl == null ||
+                    categoryResponseModel.imageUrl!.isEmpty
+                    ? AppColors.lightGray6
+                    : AppColors.white,
                     fontSize: 22.sp,
                   ),
             ).wrapCenter(),

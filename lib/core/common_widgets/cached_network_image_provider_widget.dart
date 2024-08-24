@@ -13,7 +13,9 @@ class CachedNetworkImageProviderWidget extends StatelessWidget {
     this.borderRadius,
     this.child,
     this.colorFilter,
+    this.backGroundColor,
   });
+
   final String imageUrl;
   final double? width;
   final double? height;
@@ -21,12 +23,13 @@ class CachedNetworkImageProviderWidget extends StatelessWidget {
   final BorderRadiusGeometry? borderRadius;
   final Widget? child;
   final ColorFilter? colorFilter;
+  final Color? backGroundColor;
+
   @override
   Widget build(BuildContext context) {
     return CachedNetworkImage(
       width: width ?? 50.w,
       height: height ?? 50.h,
-
       imageUrl: imageUrl,
       imageBuilder: (context, imageProvider) => Container(
         width: width ?? 50.w,
@@ -34,7 +37,7 @@ class CachedNetworkImageProviderWidget extends StatelessWidget {
         decoration: BoxDecoration(
           borderRadius: borderRadius,
           image: DecorationImage(
-            colorFilter:colorFilter,
+            colorFilter: colorFilter,
             image: imageProvider,
             fit: fit,
           ),
@@ -51,10 +54,10 @@ class CachedNetworkImageProviderWidget extends StatelessWidget {
         height: height ?? 50.h,
         decoration: BoxDecoration(
           borderRadius: borderRadius,
+          color: backGroundColor,
         ),
         child: child,
       ),
     );
   }
 }
-

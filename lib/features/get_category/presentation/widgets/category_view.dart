@@ -41,23 +41,27 @@ class CategoryView extends StatelessWidget {
                 categoryResponseModel: categoryResponseModel,
               ),
             );
-        AppLogger().info(
-            'The Fetch Parent Id Is ${categoryResponseModel.docId}');
+        AppLogger()
+            .info('The Fetch Parent Id Is ${categoryResponseModel.docId}');
 
         context.pushNamed('${AppRouteNames.subCategoriesScreen}',
             pathParameters: {"categoryId": categoryResponseModel.docId});
       },
       child: CachedNetworkImageProviderWidget(
-        width: double.infinity,
+        width: 50.w,
+        height: 40.h,
         fit: BoxFit.cover,
-        colorFilter:
-            ColorFilter.mode(Colors.black.withOpacity(0.4), BlendMode.darken),
+        colorFilter: ColorFilter.mode(Colors.black.withOpacity(0.4), BlendMode.darken),
+        backGroundColor:AppColors.white,
         imageUrl: categoryResponseModel.imageUrl ?? '',
         borderRadius: borderRadius,
         child: Text(
           categoryResponseModel.name(context.locale.languageCode),
           style: Theme.of(context).textTheme.labelSmall!.copyWith(
-                color: AppColors.white,
+                color: categoryResponseModel.imageUrl == null ||
+                        categoryResponseModel.imageUrl!.isEmpty
+                    ? AppColors.lightGray6
+                    : AppColors.white,
                 fontSize: 22.sp,
               ),
         ).wrapCenter(),

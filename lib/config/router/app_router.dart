@@ -26,38 +26,6 @@ final appRouter = GoRouter(
     GoRoute(
       path: AppRouteNames.categories,
       builder: (context, state) => const UserHomeScreen(),
-      routes: [
-        // GoRoute(
-        //   path: ':categoryId',
-        //   name:AppRouteNames.subCategoriesScreen ,
-        //   pageBuilder: (context, state) {
-        //     final CategoryResponseModel cats =
-        //         state.extra as CategoryResponseModel;
-        //     return MaterialPage<void>(
-        //       child: SubCategoriesScreen(
-        //         key: state.pageKey,
-        //         categoryResponseModel: cats,
-        //         docId: state.pathParameters['categoryId']!.toString(),
-        //       ),
-        //     );
-        //   },
-        // ),
-        // GoRoute(
-        //   path:
-        //       '${AppRouteNames.additionalSubCategoriesScreen}/:mainDocId/:docId',
-        //   pageBuilder: (context, state) {
-        //     final SubCategoryResponseModel subCatsResponseModel =
-        //         state.extra as SubCategoryResponseModel;
-        //     return MaterialPage<void>(
-        //       child: AdditionalSubCategoriesScreen(
-        //         categoryResponseModel: subCatsResponseModel,
-        //         mainDocId: state.pathParameters['mainDocId']!,
-        //         docId: state.pathParameters['docId']!,
-        //       ),
-        //     );
-        //   },
-        // ),
-      ],
     ),
     GoRoute(
       path: '/${AppRouteNames.subCategoriesScreen}/:categoryId',
