@@ -22,6 +22,10 @@ class $AssetsImagesGen {
 class $AssetsLottieGen {
   const $AssetsLottieGen();
 
+  /// File path: assets/lottie/bistro house.mp4.lottie.json
+  String get bistroHouseMp4Lottie =>
+      'assets/lottie/bistro house.mp4.lottie.json';
+
   /// File path: assets/lottie/empty.json
   String get empty => 'assets/lottie/empty.json';
 
@@ -29,7 +33,7 @@ class $AssetsLottieGen {
   String get successLottie => 'assets/lottie/success_lottie.json';
 
   /// List of all assets
-  List<String> get values => [empty, successLottie];
+  List<String> get values => [bistroHouseMp4Lottie, empty, successLottie];
 }
 
 class $AssetsTranslationsGen {

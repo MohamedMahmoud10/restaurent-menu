@@ -2,7 +2,7 @@
 // import 'package:get_medical_services/core/navigation/app_route_names.dart';
 // import 'package:get_medical_services/features/book_appointment/presentation/screens/book_appointment_screen.dart';
 // import 'package:get_medical_services/features/get_all_sub_category/presentation/screens/sub_categories_details_screen.dart';
-// import 'package:get_medical_services/features/get_all_sub_category/presentation/screens/sub_categories_screen.dart';
+// import 'package:get_medical_services/features/get_all_sub_category/presentation/screens/additional_sub_categories_screen.dart';
 // import 'package:get_medical_services/features/get_category/presentation/screens/categories_screen.dart';
 // import 'package:get_medical_services/features/get_category/presentation/screens/splash_loading_screen.dart';
 // import 'package:get_medical_services/features/get_doctors/presentation/screens/doctor_details_screen.dart';

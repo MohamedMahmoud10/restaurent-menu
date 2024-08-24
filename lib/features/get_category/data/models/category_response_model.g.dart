@@ -11,10 +11,10 @@ _$CategoryResponseModelImpl _$$CategoryResponseModelImplFromJson(
     _$CategoryResponseModelImpl(
       docId: json['docId'] as String,
       categoryNameAr: json['categoryNameAr'] as String,
-      categoryNameEn: json['categoryNameEn'] as String,
-      descriptionAr: json['descriptionAr'] as String,
-      descriptionEn: json['descriptionEn'] as String,
-      imageUrl: json['imageUrl'] as String,
+      categoryNameEn: json['categoryNameEn'] as String?,
+      descriptionAr: json['descriptionAr'] as String?,
+      descriptionEn: json['descriptionEn'] as String?,
+      imageUrl: json['imageUrl'] as String?,
       enabled: json['enabled'] as bool? ?? false,
       loadingImageUrl: json['downloadUrl'] as String? ?? '',
     );

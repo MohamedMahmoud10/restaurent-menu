@@ -22,14 +22,13 @@ SubCategoryResponseModel _$SubCategoryResponseModelFromJson(
 /// @nodoc
 mixin _$SubCategoryResponseModel {
   String? get docId => throw _privateConstructorUsedError;
-  @JsonKey(name: 'NameAr')
-  String get subCategoryNameAr => throw _privateConstructorUsedError;
-  @JsonKey(name: 'NameEn')
-  String get subCategoryNameEn => throw _privateConstructorUsedError;
-  String get descriptionAr => throw _privateConstructorUsedError;
-  String get descriptionEn => throw _privateConstructorUsedError;
-  String get imageUrl => throw _privateConstructorUsedError;
-  String? get price => throw _privateConstructorUsedError;
+  String get categoryNameAr => throw _privateConstructorUsedError;
+  String? get categoryNameEn => throw _privateConstructorUsedError;
+  String? get descriptionAr => throw _privateConstructorUsedError;
+  String? get descriptionEn => throw _privateConstructorUsedError;
+  @JsonKey(includeIfNull: false)
+  String? get imageUrl => throw _privateConstructorUsedError;
+  bool get enabled => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $SubCategoryResponseModelCopyWith<SubCategoryResponseModel> get copyWith =>
@@ -44,12 +43,12 @@ abstract class $SubCategoryResponseModelCopyWith<$Res> {
   @useResult
   $Res call(
       {String? docId,
-      @JsonKey(name: 'NameAr') String subCategoryNameAr,
-      @JsonKey(name: 'NameEn') String subCategoryNameEn,
-      String descriptionAr,
-      String descriptionEn,
-      String imageUrl,
-      String? price});
+      String categoryNameAr,
+      String? categoryNameEn,
+      String? descriptionAr,
+      String? descriptionEn,
+      @JsonKey(includeIfNull: false) String? imageUrl,
+      bool enabled});
 }
 
 /// @nodoc
@@ -67,42 +66,42 @@ class _$SubCategoryResponseModelCopyWithImpl<$Res,
   @override
   $Res call({
     Object? docId = freezed,
-    Object? subCategoryNameAr = null,
-    Object? subCategoryNameEn = null,
-    Object? descriptionAr = null,
-    Object? descriptionEn = null,
-    Object? imageUrl = null,
-    Object? price = freezed,
+    Object? categoryNameAr = null,
+    Object? categoryNameEn = freezed,
+    Object? descriptionAr = freezed,
+    Object? descriptionEn = freezed,
+    Object? imageUrl = freezed,
+    Object? enabled = null,
   }) {
     return _then(_value.copyWith(
       docId: freezed == docId
           ? _value.docId
           : docId // ignore: cast_nullable_to_non_nullable
               as String?,
-      subCategoryNameAr: null == subCategoryNameAr
-          ? _value.subCategoryNameAr
-          : subCategoryNameAr // ignore: cast_nullable_to_non_nullable
+      categoryNameAr: null == categoryNameAr
+          ? _value.categoryNameAr
+          : categoryNameAr // ignore: cast_nullable_to_non_nullable
               as String,
-      subCategoryNameEn: null == subCategoryNameEn
-          ? _value.subCategoryNameEn
-          : subCategoryNameEn // ignore: cast_nullable_to_non_nullable
-              as String,
-      descriptionAr: null == descriptionAr
+      categoryNameEn: freezed == categoryNameEn
+          ? _value.categoryNameEn
+          : categoryNameEn // ignore: cast_nullable_to_non_nullable
+              as String?,
+      descriptionAr: freezed == descriptionAr
           ? _value.descriptionAr
           : descriptionAr // ignore: cast_nullable_to_non_nullable
-              as String,
-      descriptionEn: null == descriptionEn
+              as String?,
+      descriptionEn: freezed == descriptionEn
           ? _value.descriptionEn
           : descriptionEn // ignore: cast_nullable_to_non_nullable
-              as String,
-      imageUrl: null == imageUrl
+              as String?,
+      imageUrl: freezed == imageUrl
           ? _value.imageUrl
           : imageUrl // ignore: cast_nullable_to_non_nullable
-              as String,
-      price: freezed == price
-          ? _value.price
-          : price // ignore: cast_nullable_to_non_nullable
               as String?,
+      enabled: null == enabled
+          ? _value.enabled
+          : enabled // ignore: cast_nullable_to_non_nullable
+              as bool,
     ) as $Val);
   }
 }
@@ -118,12 +117,12 @@ abstract class _$$SubCategoryResponseModelImplCopyWith<$Res>
   @useResult
   $Res call(
       {String? docId,
-      @JsonKey(name: 'NameAr') String subCategoryNameAr,
-      @JsonKey(name: 'NameEn') String subCategoryNameEn,
-      String descriptionAr,
-      String descriptionEn,
-      String imageUrl,
-      String? price});
+      String categoryNameAr,
+      String? categoryNameEn,
+      String? descriptionAr,
+      String? descriptionEn,
+      @JsonKey(includeIfNull: false) String? imageUrl,
+      bool enabled});
 }
 
 /// @nodoc
@@ -140,42 +139,42 @@ class __$$SubCategoryResponseModelImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? docId = freezed,
-    Object? subCategoryNameAr = null,
-    Object? subCategoryNameEn = null,
-    Object? descriptionAr = null,
-    Object? descriptionEn = null,
-    Object? imageUrl = null,
-    Object? price = freezed,
+    Object? categoryNameAr = null,
+    Object? categoryNameEn = freezed,
+    Object? descriptionAr = freezed,
+    Object? descriptionEn = freezed,
+    Object? imageUrl = freezed,
+    Object? enabled = null,
   }) {
     return _then(_$SubCategoryResponseModelImpl(
       docId: freezed == docId
           ? _value.docId
           : docId // ignore: cast_nullable_to_non_nullable
               as String?,
-      subCategoryNameAr: null == subCategoryNameAr
-          ? _value.subCategoryNameAr
-          : subCategoryNameAr // ignore: cast_nullable_to_non_nullable
+      categoryNameAr: null == categoryNameAr
+          ? _value.categoryNameAr
+          : categoryNameAr // ignore: cast_nullable_to_non_nullable
               as String,
-      subCategoryNameEn: null == subCategoryNameEn
-          ? _value.subCategoryNameEn
-          : subCategoryNameEn // ignore: cast_nullable_to_non_nullable
-              as String,
-      descriptionAr: null == descriptionAr
+      categoryNameEn: freezed == categoryNameEn
+          ? _value.categoryNameEn
+          : categoryNameEn // ignore: cast_nullable_to_non_nullable
+              as String?,
+      descriptionAr: freezed == descriptionAr
           ? _value.descriptionAr
           : descriptionAr // ignore: cast_nullable_to_non_nullable
-              as String,
-      descriptionEn: null == descriptionEn
+              as String?,
+      descriptionEn: freezed == descriptionEn
           ? _value.descriptionEn
           : descriptionEn // ignore: cast_nullable_to_non_nullable
-              as String,
-      imageUrl: null == imageUrl
+              as String?,
+      imageUrl: freezed == imageUrl
           ? _value.imageUrl
           : imageUrl // ignore: cast_nullable_to_non_nullable
-              as String,
-      price: freezed == price
-          ? _value.price
-          : price // ignore: cast_nullable_to_non_nullable
               as String?,
+      enabled: null == enabled
+          ? _value.enabled
+          : enabled // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -185,12 +184,12 @@ class __$$SubCategoryResponseModelImplCopyWithImpl<$Res>
 class _$SubCategoryResponseModelImpl extends _SubCategoryResponseModel {
   _$SubCategoryResponseModelImpl(
       {this.docId,
-      @JsonKey(name: 'NameAr') required this.subCategoryNameAr,
-      @JsonKey(name: 'NameEn') required this.subCategoryNameEn,
-      required this.descriptionAr,
-      required this.descriptionEn,
-      required this.imageUrl,
-      this.price})
+      required this.categoryNameAr,
+      this.categoryNameEn = '',
+      this.descriptionAr,
+      this.descriptionEn = '',
+      @JsonKey(includeIfNull: false) this.imageUrl,
+      this.enabled = false})
       : super._();
 
   factory _$SubCategoryResponseModelImpl.fromJson(Map<String, dynamic> json) =>
@@ -199,23 +198,25 @@ class _$SubCategoryResponseModelImpl extends _SubCategoryResponseModel {
   @override
   final String? docId;
   @override
-  @JsonKey(name: 'NameAr')
-  final String subCategoryNameAr;
+  final String categoryNameAr;
   @override
-  @JsonKey(name: 'NameEn')
-  final String subCategoryNameEn;
+  @JsonKey()
+  final String? categoryNameEn;
   @override
-  final String descriptionAr;
+  final String? descriptionAr;
   @override
-  final String descriptionEn;
+  @JsonKey()
+  final String? descriptionEn;
   @override
-  final String imageUrl;
+  @JsonKey(includeIfNull: false)
+  final String? imageUrl;
   @override
-  final String? price;
+  @JsonKey()
+  final bool enabled;
 
   @override
   String toString() {
-    return 'SubCategoryResponseModel(docId: $docId, subCategoryNameAr: $subCategoryNameAr, subCategoryNameEn: $subCategoryNameEn, descriptionAr: $descriptionAr, descriptionEn: $descriptionEn, imageUrl: $imageUrl, price: $price)';
+    return 'SubCategoryResponseModel(docId: $docId, categoryNameAr: $categoryNameAr, categoryNameEn: $categoryNameEn, descriptionAr: $descriptionAr, descriptionEn: $descriptionEn, imageUrl: $imageUrl, enabled: $enabled)';
   }
 
   @override
@@ -224,23 +225,23 @@ class _$SubCategoryResponseModelImpl extends _SubCategoryResponseModel {
         (other.runtimeType == runtimeType &&
             other is _$SubCategoryResponseModelImpl &&
             (identical(other.docId, docId) || other.docId == docId) &&
-            (identical(other.subCategoryNameAr, subCategoryNameAr) ||
-                other.subCategoryNameAr == subCategoryNameAr) &&
-            (identical(other.subCategoryNameEn, subCategoryNameEn) ||
-                other.subCategoryNameEn == subCategoryNameEn) &&
+            (identical(other.categoryNameAr, categoryNameAr) ||
+                other.categoryNameAr == categoryNameAr) &&
+            (identical(other.categoryNameEn, categoryNameEn) ||
+                other.categoryNameEn == categoryNameEn) &&
             (identical(other.descriptionAr, descriptionAr) ||
                 other.descriptionAr == descriptionAr) &&
             (identical(other.descriptionEn, descriptionEn) ||
                 other.descriptionEn == descriptionEn) &&
             (identical(other.imageUrl, imageUrl) ||
                 other.imageUrl == imageUrl) &&
-            (identical(other.price, price) || other.price == price));
+            (identical(other.enabled, enabled) || other.enabled == enabled));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, docId, subCategoryNameAr,
-      subCategoryNameEn, descriptionAr, descriptionEn, imageUrl, price);
+  int get hashCode => Object.hash(runtimeType, docId, categoryNameAr,
+      categoryNameEn, descriptionAr, descriptionEn, imageUrl, enabled);
 
   @JsonKey(ignore: true)
   @override
@@ -253,12 +254,12 @@ class _$SubCategoryResponseModelImpl extends _SubCategoryResponseModel {
 abstract class _SubCategoryResponseModel extends SubCategoryResponseModel {
   factory _SubCategoryResponseModel(
       {final String? docId,
-      @JsonKey(name: 'NameAr') required final String subCategoryNameAr,
-      @JsonKey(name: 'NameEn') required final String subCategoryNameEn,
-      required final String descriptionAr,
-      required final String descriptionEn,
-      required final String imageUrl,
-      final String? price}) = _$SubCategoryResponseModelImpl;
+      required final String categoryNameAr,
+      final String? categoryNameEn,
+      final String? descriptionAr,
+      final String? descriptionEn,
+      @JsonKey(includeIfNull: false) final String? imageUrl,
+      final bool enabled}) = _$SubCategoryResponseModelImpl;
   _SubCategoryResponseModel._() : super._();
 
   factory _SubCategoryResponseModel.fromJson(Map<String, dynamic> json) =
@@ -267,19 +268,18 @@ abstract class _SubCategoryResponseModel extends SubCategoryResponseModel {
   @override
   String? get docId;
   @override
-  @JsonKey(name: 'NameAr')
-  String get subCategoryNameAr;
+  String get categoryNameAr;
   @override
-  @JsonKey(name: 'NameEn')
-  String get subCategoryNameEn;
+  String? get categoryNameEn;
   @override
-  String get descriptionAr;
+  String? get descriptionAr;
   @override
-  String get descriptionEn;
+  String? get descriptionEn;
   @override
-  String get imageUrl;
+  @JsonKey(includeIfNull: false)
+  String? get imageUrl;
   @override
-  String? get price;
+  bool get enabled;
   @override
   @JsonKey(ignore: true)
   _$$SubCategoryResponseModelImplCopyWith<_$SubCategoryResponseModelImpl>

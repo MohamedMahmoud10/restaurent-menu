@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:restaurent_digital_menu/core/theme/app_colors.dart';
 
 class CustomElevatedButton extends StatelessWidget {
@@ -27,7 +27,8 @@ class CustomElevatedButton extends StatelessWidget {
       style: ElevatedButton.styleFrom(
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(
-              borderRadius??10.r,
+              // borderRadius??10.r,
+              borderRadius??10,
             ),
           ),
           minimumSize: Size(buttonWidth ?? 327.w, buttonHeight ?? 52.h),

@@ -8,13 +8,15 @@ part 'sub_category_models.g.dart';
 class SubCategoryResponseModel with _$SubCategoryResponseModel {
   factory SubCategoryResponseModel({
     String? docId,
-    @JsonKey(name: 'NameAr') required String subCategoryNameAr,
-    @JsonKey(name: 'NameEn') required String subCategoryNameEn,
-    required String descriptionAr,
-    required String descriptionEn,
-    required String imageUrl,
-    String?price,
-
+    required String categoryNameAr,
+    @Default('') String? categoryNameEn,
+    String? descriptionAr,
+    @Default('') String? descriptionEn,
+    @JsonKey(
+      includeIfNull: false,
+    )
+    String? imageUrl,
+    @Default(false) bool enabled,
   }) = _SubCategoryResponseModel;
 
   SubCategoryResponseModel._();
@@ -23,9 +25,8 @@ class SubCategoryResponseModel with _$SubCategoryResponseModel {
       _$SubCategoryResponseModelFromJson(json);
 
   String name(String localeName) =>
-      localeName == 'ar' ? subCategoryNameAr : subCategoryNameEn;
+      localeName == 'ar' ? categoryNameAr  : categoryNameEn ?? '';
 
   String description(String localeName) =>
-      localeName == 'ar' ? descriptionAr : descriptionEn;
-
+      localeName == 'ar' ? descriptionAr ?? '' : descriptionEn ?? '';
 }

@@ -14,7 +14,7 @@ class CategoryRepository {
     try {
       final dbCollection =
           _db.collection(DatabaseConstants.categoriesCollection);
-      yield* dbCollection.where("enabled",isEqualTo:true).snapshots().map((snapshot) {
+      yield* dbCollection.orderBy('createdAt', descending: true).snapshots().map((snapshot) {
         return snapshot.docs
             .map((doc) {
               try {

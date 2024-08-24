@@ -10,10 +10,10 @@ _$SubCategoryResponseModelImpl _$$SubCategoryResponseModelImplFromJson(
         Map<String, dynamic> json) =>
     _$SubCategoryResponseModelImpl(
       docId: json['docId'] as String?,
-      subCategoryNameAr: json['NameAr'] as String,
-      subCategoryNameEn: json['NameEn'] as String,
-      descriptionAr: json['descriptionAr'] as String,
-      descriptionEn: json['descriptionEn'] as String,
-      imageUrl: json['imageUrl'] as String,
-      price: json['price'] as String?,
+      categoryNameAr: json['categoryNameAr'] as String,
+      categoryNameEn: json['categoryNameEn'] as String? ?? '',
+      descriptionAr: json['descriptionAr'] as String?,
+      descriptionEn: json['descriptionEn'] as String? ?? '',
+      imageUrl: json['imageUrl'] as String?,
+      enabled: json['enabled'] as bool? ?? false,
     );

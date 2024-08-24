@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
 class AppDimensions {
   // Text sizes
@@ -24,10 +24,10 @@ class AppDimensions {
   static double widthExtraLarge = 200.w;
 
   // Border
-  static double borderSmall = 15.r;
-  static double borderMedium = 25.r;
-  static double borderLarge = 60.r;
-  static double borderExtraLarge = 80.r;
+  static double borderSmall = 15;
+  static double borderMedium = 25;
+  static double borderLarge = 60;
+  static double borderExtraLarge = 80;
   // FontWeight
 
   static const FontWeight light = FontWeight.w300;

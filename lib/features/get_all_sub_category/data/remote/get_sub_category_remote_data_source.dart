@@ -10,16 +10,23 @@ class GetSubCategoryRemoteDataSource {
 
   GetSubCategoryRemoteDataSource(this._dbRemote);
 
-  Future<List<SubCategoryResponseModel>> getAllCategories({required String docId}) async {
+  Future<List<SubCategoryResponseModel>> getAllCategories(
+      {required String docId}) async {
     try {
       final db = await _dbRemote
-          .collection(DatabaseConstants.categoriesCollection).doc(docId).collection(DatabaseConstants.subCategoriesCollection)
+          .collection(DatabaseConstants.categoriesCollection)
+          .doc(docId)
+          .collection(DatabaseConstants.subCategoriesCollection)
+
+          .orderBy('createdAt', descending: true)
           .get();
-      final subCategories = db.docs.map(
-        (e) => SubCategoryResponseModel.fromJson(
-          e.data(),
-        ),
-      ).toList();
+      final subCategories = db.docs
+          .map(
+            (e) => SubCategoryResponseModel.fromJson(
+              e.data(),
+            ),
+          )
+          .toList();
       return subCategories;
     } on FirebaseException catch (e) {
       AppLogger().error('Error From Fetching All Categories $e');

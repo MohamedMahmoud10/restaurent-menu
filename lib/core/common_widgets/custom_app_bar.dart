@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:go_router/go_router.dart';
 import 'package:restaurent_digital_menu/core/theme/app_colors.dart';
 
@@ -43,7 +43,8 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
               ? Container(
                   margin: const EdgeInsets.all(8),
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10.r),
+                    // borderRadius: BorderRadius.circular(10.r),
+                    borderRadius: BorderRadius.circular(10),
                     color: AppColors.gray,
                   ),
                   child: const BackButton(
@@ -53,7 +54,8 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
               : null,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.vertical(
-          bottom: Radius.circular(20.r),
+          // bottom: Radius.circular(20.r),
+          bottom: Radius.circular(20),
         ),
       ),
     );

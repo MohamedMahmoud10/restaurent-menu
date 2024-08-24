@@ -12,6 +12,10 @@ import 'package:cloud_firestore/cloud_firestore.dart' as _i974;
 import 'package:get_it/get_it.dart' as _i174;
 import 'package:injectable/injectable.dart' as _i526;
 
+import '../../features/get_additional_sub_categories/data/remote/get_additional_sub_category_details_remote_data_source.dart'
+    as _i759;
+import '../../features/get_additional_sub_categories/data/repository/get_additional_sub_category_repository.dart'
+    as _i445;
 import '../../features/get_all_sub_category/data/remote/get_sub_category_details_remote_data_source.dart'
     as _i904;
 import '../../features/get_all_sub_category/data/remote/get_sub_category_remote_data_source.dart'
@@ -42,9 +46,15 @@ extension GetItInjectableX on _i174.GetIt {
             gh<_i974.FirebaseFirestore>()));
     gh.lazySingleton<_i919.GetSubCategoryRemoteDataSource>(() =>
         _i919.GetSubCategoryRemoteDataSource(gh<_i974.FirebaseFirestore>()));
+    gh.lazySingleton<_i759.GetAdditionalSubCategoryRemoteDataSource>(() =>
+        _i759.GetAdditionalSubCategoryRemoteDataSource(
+            gh<_i974.FirebaseFirestore>()));
     gh.lazySingleton<_i131.GetSubCategoryDetailsRepository>(() =>
         _i131.GetSubCategoryDetailsRepository(
             gh<_i904.GetSubCategoryDetailsRemoteDataSource>()));
+    gh.lazySingleton<_i445.GetAdditionalSubCategoryRepository>(() =>
+        _i445.GetAdditionalSubCategoryRepository(
+            gh<_i759.GetAdditionalSubCategoryRemoteDataSource>()));
     gh.lazySingleton<_i975.CategoryRepository>(
         () => _i975.CategoryRepository(gh<_i974.FirebaseFirestore>()));
     gh.lazySingleton<_i643.GetSubCategoryRepository>(() =>

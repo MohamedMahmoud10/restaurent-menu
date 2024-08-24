@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "580176597057",
+    "project_id": "restaurnet-menu",
+    "storage_bucket": "restaurnet-menu.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:580176597057:android:405a3ea6d876e3be4a36c0",
+        "android_client_info": {
+          "package_name": "com.restaurent_upload_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDf6XjlfoK5LoHSug6-wk_WEtwJ_zgb5Hk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

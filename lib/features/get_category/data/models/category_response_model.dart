@@ -9,10 +9,10 @@ class CategoryResponseModel with _$CategoryResponseModel {
    factory CategoryResponseModel({
     required String docId,
     required String categoryNameAr,
-    required String categoryNameEn,
-    required String descriptionAr,
-    required String descriptionEn,
-    required String imageUrl,
+     String? categoryNameEn,
+     String? descriptionAr,
+     String? descriptionEn,
+     String ?imageUrl,
     @Default(false) bool?enabled,
      @JsonKey(name:'downloadUrl')@Default('') String ?loadingImageUrl,
 
@@ -20,9 +20,9 @@ class CategoryResponseModel with _$CategoryResponseModel {
   CategoryResponseModel._();
 
   factory CategoryResponseModel.fromJson(Map<String,dynamic>json)=>_$CategoryResponseModelFromJson(json);
-  String name(String localeName) => localeName == 'ar' ? categoryNameAr : categoryNameEn;
+  String name(String localeName) => localeName == 'ar' ? categoryNameAr : categoryNameEn??'';
 
   String description(String localeName) =>
-      localeName == 'ar' ? descriptionAr : descriptionEn;
+      localeName == 'ar' ? descriptionAr??'' : descriptionEn??'';
 
 }

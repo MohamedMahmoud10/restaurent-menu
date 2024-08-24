@@ -14,41 +14,7 @@ class CodegenLoader extends AssetLoader{
     return Future.value(mapLocales[locale.toString()]);
   }
 
-  static const Map<String,dynamic> en = {
-  "bookAndScheduleWithNearestDoctor": "Book and\nschedule with\nnearest doctor",
-  "findNearby": "Find Nearby",
-  "doctorSpeciality": "Doctor Speciality",
-  "seeAll": "See All",
-  "recommendationDoctor": "Recommendation Doctor",
-  "brings": "Recommendation Doctor",
-  "yearsOfExperience": "years of experience",
-  "availableTime": "Available time",
-  "selectDate": "Select Date",
-  "appointmentType": "Appointment Type",
-  "about": "About",
-  "location": "Location",
-  "contacts": "Contacts",
-  "makeAnAppointment": "Make An Appointment",
-  "inPerson": "In Person",
-  "phoneCall": "Phone Call",
-  "bookNow": "Book Now",
-  "bookingFrom": "Booking From",
-  "hasBook": "has book",
-  "at": "At",
-  "selectTime": "Select Time",
-  "name": "Name",
-  "pleaseEnterYourName": "Please enter your name",
-  "phoneNumber": "Phone Number",
-  "pleaseEnterYourPhoneNumber": "Please enter your phone number",
-  "pleaseSelectDate": "Please select a date",
-  "pleaseSelectTime": "Please select a time",
-  "bookAppointment": "Book Appointment",
-  "appointmentBookedSuccessfully": "Appointment Booked Successfully!",
-  "ok": "OK",
-  "currency": "EGP",
-  "on_demand": "On Demand"
-};
-static const Map<String,dynamic> ar = {
+  static const Map<String,dynamic> ar = {
   "bookAndScheduleWithNearestDoctor": "احجز و\nجدول مواعيدك مع\n أقرب طبيب",
   "findNearby": "ابحث عن القرب",
   "doctorSpeciality": "تخصص الطبيب",
@@ -82,5 +48,39 @@ static const Map<String,dynamic> ar = {
   "currency": "ج.م",
   "on_demand": "حسب الطلب"
 };
-static const Map<String, Map<String,dynamic>> mapLocales = {"en": en, "ar": ar};
+static const Map<String,dynamic> en = {
+  "bookAndScheduleWithNearestDoctor": "Book and\nschedule with\nnearest doctor",
+  "findNearby": "Find Nearby",
+  "doctorSpeciality": "Doctor Speciality",
+  "seeAll": "See All",
+  "recommendationDoctor": "Recommendation Doctor",
+  "brings": "Recommendation Doctor",
+  "yearsOfExperience": "years of experience",
+  "availableTime": "Available time",
+  "selectDate": "Select Date",
+  "appointmentType": "Appointment Type",
+  "about": "About",
+  "location": "Location",
+  "contacts": "Contacts",
+  "makeAnAppointment": "Make An Appointment",
+  "inPerson": "In Person",
+  "phoneCall": "Phone Call",
+  "bookNow": "Book Now",
+  "bookingFrom": "Booking From",
+  "hasBook": "has book",
+  "at": "At",
+  "selectTime": "Select Time",
+  "name": "Name",
+  "pleaseEnterYourName": "Please enter your name",
+  "phoneNumber": "Phone Number",
+  "pleaseEnterYourPhoneNumber": "Please enter your phone number",
+  "pleaseSelectDate": "Please select a date",
+  "pleaseSelectTime": "Please select a time",
+  "bookAppointment": "Book Appointment",
+  "appointmentBookedSuccessfully": "Appointment Booked Successfully!",
+  "ok": "OK",
+  "currency": "EGP",
+  "on_demand": "On Demand"
+};
+static const Map<String, Map<String,dynamic>> mapLocales = {"ar": ar, "en": en};
 }

@@ -6,6 +6,7 @@ class DatabaseConstants{
   static const String userCollection='user_collection ';
   static const String userDataTableBox='USER-DATA-TABLE-BOX';
   static const String usersTokens='users_tokens ';
+  static const String additionalSubCategoriesCollection='additional_sub_categories_collection';
 
 
 }

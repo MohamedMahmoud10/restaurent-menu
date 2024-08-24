@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:restaurent_digital_menu/core/const/dimension/dimensions.dart';
 import 'package:restaurent_digital_menu/core/theme/app_colors.dart';
 class CustomTextTheme {
@@ -8,61 +8,61 @@ class CustomTextTheme {
   static TextTheme textTheme() {
     return TextTheme(
       titleLarge: TextStyle(
-        fontSize: ScreenUtil().setSp(30),
+        fontSize:30.sp,
         color: AppColors.textBlack,
         fontWeight: AppDimensions.medium,
         fontFamily: fontFamily,
       ),
       titleMedium: TextStyle(
-        fontSize: ScreenUtil().setSp(24),
+        fontSize:24.sp,
         color: AppColors.blueBlack,
         fontWeight: AppDimensions.semiBold,
         fontFamily: fontFamily,
       ),
       titleSmall: TextStyle(
-        fontSize: ScreenUtil().setSp(13),
+        fontSize: 13.sp,
         color: AppColors.white,
         fontWeight: AppDimensions.regular,
         fontFamily: fontFamily,
       ),
       displayLarge: TextStyle(
-        fontSize: ScreenUtil().setSp(18),
+        fontSize: 18.sp,
         color: AppColors.textBlack,
         fontWeight: AppDimensions.semiBold,
         fontFamily: fontFamily,
       ),
       displayMedium: TextStyle(
-        fontSize: ScreenUtil().setSp(15),
+        fontSize: 15.sp,
         color: AppColors.blueBlack,
         fontWeight: AppDimensions.semiBold,
         fontFamily: fontFamily,
       ),
       displaySmall: TextStyle(
-        fontSize: ScreenUtil().setSp(15),
+        fontSize: 15.sp,
         color: AppColors.textGray2,
         fontWeight: AppDimensions.light,
         fontFamily: fontFamily,
       ),
       labelSmall: TextStyle(
-        fontSize: ScreenUtil().setSp(12),
+        fontSize: 12.sp,
         color: AppColors.blueText,
         fontWeight: AppDimensions.regular,
         fontFamily: fontFamily,
       ),
       headlineMedium: TextStyle(
-        fontSize: ScreenUtil().setSp(13),
+        fontSize: 13.sp,
         color: AppColors.gray,
         fontWeight: AppDimensions.regular,
         fontFamily: fontFamily,
       ),
       headlineSmall: TextStyle(
-        fontSize: ScreenUtil().setSp(15),
+        fontSize: 15.sp,
         color: AppColors.gray,
         fontWeight: AppDimensions.light,
         fontFamily: fontFamily,
       ),
       headlineLarge: TextStyle(
-        fontSize: ScreenUtil().setSp(18),
+        fontSize: 18.sp,
         color: AppColors.white,
         fontWeight: AppDimensions.medium,
         fontFamily: fontFamily,

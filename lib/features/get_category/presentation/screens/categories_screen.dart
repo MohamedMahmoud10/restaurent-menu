@@ -16,7 +16,6 @@ class CategoriesScreen extends StatelessWidget {
           StartFetch(),
         ),
       child: Scaffold(
-        appBar: AppBar(),
         body: const CategoriesBody(),
       ),
     );

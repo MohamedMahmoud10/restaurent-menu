@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:restaurent_digital_menu/core/common_widgets/animations/app_animated_shimmer_widget.dart';
 import 'package:restaurent_digital_menu/core/helpers/extensions/widgets_extensions.dart';
 
@@ -19,7 +19,8 @@ class CategoriesBodyShimmerView extends StatelessWidget {
           AppShimmerWidget(
             width: 56.w,
             height: 56.h,
-            borderRadius: BorderRadiusDirectional.circular(35.r),
+            // borderRadius: BorderRadiusDirectional.circular(35.r),
+            borderRadius: BorderRadiusDirectional.circular(35),
           ),
           SizedBox(
             height: 10.h,

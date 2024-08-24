@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:lottie/lottie.dart';
 import 'package:restaurent_digital_menu/core/assets/app_lottie_animation.dart';
 import 'package:restaurent_digital_menu/core/helpers/extensions/widgets_extensions.dart';

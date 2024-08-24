@@ -1,6 +1,6 @@
 {
-    "name": "Bistro Lounge",
-    "short_name": "Bistro Lounge",
+    "name": "Bistrohouse",
+    "short_name": "Bistrohouse",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#hexcode",

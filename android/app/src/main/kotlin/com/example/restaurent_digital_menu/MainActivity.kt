@@ -1,4 +1,4 @@
-package com.example.restaurent_digital_menu
+package com.restaurent_upload_app
 
 import io.flutter.embedding.android.FlutterActivity
 

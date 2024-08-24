@@ -23,10 +23,10 @@ CategoryResponseModel _$CategoryResponseModelFromJson(
 mixin _$CategoryResponseModel {
   String get docId => throw _privateConstructorUsedError;
   String get categoryNameAr => throw _privateConstructorUsedError;
-  String get categoryNameEn => throw _privateConstructorUsedError;
-  String get descriptionAr => throw _privateConstructorUsedError;
-  String get descriptionEn => throw _privateConstructorUsedError;
-  String get imageUrl => throw _privateConstructorUsedError;
+  String? get categoryNameEn => throw _privateConstructorUsedError;
+  String? get descriptionAr => throw _privateConstructorUsedError;
+  String? get descriptionEn => throw _privateConstructorUsedError;
+  String? get imageUrl => throw _privateConstructorUsedError;
   bool? get enabled => throw _privateConstructorUsedError;
   @JsonKey(name: 'downloadUrl')
   String? get loadingImageUrl => throw _privateConstructorUsedError;
@@ -45,10 +45,10 @@ abstract class $CategoryResponseModelCopyWith<$Res> {
   $Res call(
       {String docId,
       String categoryNameAr,
-      String categoryNameEn,
-      String descriptionAr,
-      String descriptionEn,
-      String imageUrl,
+      String? categoryNameEn,
+      String? descriptionAr,
+      String? descriptionEn,
+      String? imageUrl,
       bool? enabled,
       @JsonKey(name: 'downloadUrl') String? loadingImageUrl});
 }
@@ -69,10 +69,10 @@ class _$CategoryResponseModelCopyWithImpl<$Res,
   $Res call({
     Object? docId = null,
     Object? categoryNameAr = null,
-    Object? categoryNameEn = null,
-    Object? descriptionAr = null,
-    Object? descriptionEn = null,
-    Object? imageUrl = null,
+    Object? categoryNameEn = freezed,
+    Object? descriptionAr = freezed,
+    Object? descriptionEn = freezed,
+    Object? imageUrl = freezed,
     Object? enabled = freezed,
     Object? loadingImageUrl = freezed,
   }) {
@@ -85,22 +85,22 @@ class _$CategoryResponseModelCopyWithImpl<$Res,
           ? _value.categoryNameAr
           : categoryNameAr // ignore: cast_nullable_to_non_nullable
               as String,
-      categoryNameEn: null == categoryNameEn
+      categoryNameEn: freezed == categoryNameEn
           ? _value.categoryNameEn
           : categoryNameEn // ignore: cast_nullable_to_non_nullable
-              as String,
-      descriptionAr: null == descriptionAr
+              as String?,
+      descriptionAr: freezed == descriptionAr
           ? _value.descriptionAr
           : descriptionAr // ignore: cast_nullable_to_non_nullable
-              as String,
-      descriptionEn: null == descriptionEn
+              as String?,
+      descriptionEn: freezed == descriptionEn
           ? _value.descriptionEn
           : descriptionEn // ignore: cast_nullable_to_non_nullable
-              as String,
-      imageUrl: null == imageUrl
+              as String?,
+      imageUrl: freezed == imageUrl
           ? _value.imageUrl
           : imageUrl // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       enabled: freezed == enabled
           ? _value.enabled
           : enabled // ignore: cast_nullable_to_non_nullable
@@ -125,10 +125,10 @@ abstract class _$$CategoryResponseModelImplCopyWith<$Res>
   $Res call(
       {String docId,
       String categoryNameAr,
-      String categoryNameEn,
-      String descriptionAr,
-      String descriptionEn,
-      String imageUrl,
+      String? categoryNameEn,
+      String? descriptionAr,
+      String? descriptionEn,
+      String? imageUrl,
       bool? enabled,
       @JsonKey(name: 'downloadUrl') String? loadingImageUrl});
 }
@@ -147,10 +147,10 @@ class __$$CategoryResponseModelImplCopyWithImpl<$Res>
   $Res call({
     Object? docId = null,
     Object? categoryNameAr = null,
-    Object? categoryNameEn = null,
-    Object? descriptionAr = null,
-    Object? descriptionEn = null,
-    Object? imageUrl = null,
+    Object? categoryNameEn = freezed,
+    Object? descriptionAr = freezed,
+    Object? descriptionEn = freezed,
+    Object? imageUrl = freezed,
     Object? enabled = freezed,
     Object? loadingImageUrl = freezed,
   }) {
@@ -163,22 +163,22 @@ class __$$CategoryResponseModelImplCopyWithImpl<$Res>
           ? _value.categoryNameAr
           : categoryNameAr // ignore: cast_nullable_to_non_nullable
               as String,
-      categoryNameEn: null == categoryNameEn
+      categoryNameEn: freezed == categoryNameEn
           ? _value.categoryNameEn
           : categoryNameEn // ignore: cast_nullable_to_non_nullable
-              as String,
-      descriptionAr: null == descriptionAr
+              as String?,
+      descriptionAr: freezed == descriptionAr
           ? _value.descriptionAr
           : descriptionAr // ignore: cast_nullable_to_non_nullable
-              as String,
-      descriptionEn: null == descriptionEn
+              as String?,
+      descriptionEn: freezed == descriptionEn
           ? _value.descriptionEn
           : descriptionEn // ignore: cast_nullable_to_non_nullable
-              as String,
-      imageUrl: null == imageUrl
+              as String?,
+      imageUrl: freezed == imageUrl
           ? _value.imageUrl
           : imageUrl // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       enabled: freezed == enabled
           ? _value.enabled
           : enabled // ignore: cast_nullable_to_non_nullable
@@ -197,10 +197,10 @@ class _$CategoryResponseModelImpl extends _CategoryResponseModel {
   _$CategoryResponseModelImpl(
       {required this.docId,
       required this.categoryNameAr,
-      required this.categoryNameEn,
-      required this.descriptionAr,
-      required this.descriptionEn,
-      required this.imageUrl,
+      this.categoryNameEn,
+      this.descriptionAr,
+      this.descriptionEn,
+      this.imageUrl,
       this.enabled = false,
       @JsonKey(name: 'downloadUrl') this.loadingImageUrl = ''})
       : super._();
@@ -213,13 +213,13 @@ class _$CategoryResponseModelImpl extends _CategoryResponseModel {
   @override
   final String categoryNameAr;
   @override
-  final String categoryNameEn;
+  final String? categoryNameEn;
   @override
-  final String descriptionAr;
+  final String? descriptionAr;
   @override
-  final String descriptionEn;
+  final String? descriptionEn;
   @override
-  final String imageUrl;
+  final String? imageUrl;
   @override
   @JsonKey()
   final bool? enabled;
@@ -278,10 +278,10 @@ abstract class _CategoryResponseModel extends CategoryResponseModel {
   factory _CategoryResponseModel(
           {required final String docId,
           required final String categoryNameAr,
-          required final String categoryNameEn,
-          required final String descriptionAr,
-          required final String descriptionEn,
-          required final String imageUrl,
+          final String? categoryNameEn,
+          final String? descriptionAr,
+          final String? descriptionEn,
+          final String? imageUrl,
           final bool? enabled,
           @JsonKey(name: 'downloadUrl') final String? loadingImageUrl}) =
       _$CategoryResponseModelImpl;
@@ -295,13 +295,13 @@ abstract class _CategoryResponseModel extends CategoryResponseModel {
   @override
   String get categoryNameAr;
   @override
-  String get categoryNameEn;
+  String? get categoryNameEn;
   @override
-  String get descriptionAr;
+  String? get descriptionAr;
   @override
-  String get descriptionEn;
+  String? get descriptionEn;
   @override
-  String get imageUrl;
+  String? get imageUrl;
   @override
   bool? get enabled;
   @override
