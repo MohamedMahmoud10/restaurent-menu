@@ -28,7 +28,7 @@ final appRouter = GoRouter(
       builder: (context, state) => const UserHomeScreen(),
     ),
     GoRoute(
-      path: '/${AppRouteNames.subCategoriesScreen}/:categoryId',
+      path: '${AppRouteNames.categories}/${AppRouteNames.subCategoriesScreen}/:categoryId',
       name:AppRouteNames.subCategoriesScreen ,
       pageBuilder: (context, state) {
         return MaterialPage<void>(

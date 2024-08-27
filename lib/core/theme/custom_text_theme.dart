@@ -28,7 +28,7 @@ class CustomTextTheme {
       displayLarge: TextStyle(
         fontSize: 18.sp,
         color: AppColors.textBlack,
-        fontWeight: AppDimensions.semiBold,
+        fontWeight: AppDimensions.regular,
         fontFamily: fontFamily,
       ),
       displayMedium: TextStyle(
