@@ -41,7 +41,7 @@ class AppBarView extends StatelessWidget {
                         categoryResponseModel.imageUrl!.isEmpty
                         ? AppColors.lightGray6
                         : AppColors.white,
-                    fontSize: 22.sp,
+                    fontSize: 25.sp,
                   ),
                 ).wrapCenter(),
               ],

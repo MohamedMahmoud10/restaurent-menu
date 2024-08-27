@@ -19,11 +19,13 @@ class AdditionalSubCategoryView extends StatelessWidget {
         subCategoryResponseModel.description(context.locale.languageCode);
 
     return Container(
-      width: 40.w,
+      padding: EdgeInsets.symmetric(vertical: 1.h,horizontal: 2.w),
+      margin: EdgeInsets.symmetric(vertical: 4.h,horizontal: 5.w),
+      width: Device.screenType==ScreenType.mobile?Adaptive.w(90):60.w,
       decoration: ShapeDecoration(
         color: AppColors.white,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(16),
+          borderRadius: BorderRadius.circular(24),
         ),
         shadows: const <BoxShadow>[
           BoxShadow(
@@ -56,7 +58,7 @@ class AdditionalSubCategoryView extends StatelessWidget {
                   Text(
                     subCategoryResponseModel.name(context.locale.languageCode),
                     style: Theme.of(context).textTheme.displayLarge!.copyWith(
-                          fontWeight: AppDimensions.semiBold,
+                          fontWeight: AppDimensions.regular,
                           fontSize: 22.sp,
                           color: AppColors.textBlack,
                           height: 1.6,

@@ -31,18 +31,17 @@ class SubCategoryView extends StatelessWidget {
       },
       child: CachedNetworkImageProviderWidget(
         imageUrl: subCategoryResponseModel.imageUrl ?? '',
-        width: 50.w,
-        height: 40.h,
+        width: 60.w,
+        height: 30.h,
         fit: BoxFit.cover,
         colorFilter:
-            ColorFilter.mode(Colors.black.withOpacity(0.4), BlendMode.darken),
+            ColorFilter.mode(Colors.black.withOpacity(0.5), BlendMode.darken),
         borderRadius: BorderRadius.circular(16),
         backGroundColor: Colors.white,
         child: Text(
           subCategoryResponseModel.name(context.locale.languageCode),
           style: Theme.of(context).textTheme.displayLarge!.copyWith(
-                fontWeight: AppDimensions.semiBold,
-                fontSize: 22.sp,
+            fontSize: 25.sp,
             color: subCategoryResponseModel.imageUrl == null ||
                 subCategoryResponseModel.imageUrl!.isEmpty
                 ? AppColors.lightGray6

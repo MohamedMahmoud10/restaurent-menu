@@ -3,7 +3,7 @@ import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:restaurent_digital_menu/core/const/dimension/dimensions.dart';
 import 'package:restaurent_digital_menu/core/theme/app_colors.dart';
 class CustomTextTheme {
-  static const String fontFamily = 'Inter';
+  static const String fontFamily = 'ARIAL';
 
   static TextTheme textTheme() {
     return TextTheme(
@@ -46,7 +46,7 @@ class CustomTextTheme {
       labelSmall: TextStyle(
         fontSize: 12.sp,
         color: AppColors.blueText,
-        fontWeight: AppDimensions.regular,
+        fontWeight: AppDimensions.medium,
         fontFamily: fontFamily,
       ),
       headlineMedium: TextStyle(

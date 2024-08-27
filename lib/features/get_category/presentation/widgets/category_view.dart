@@ -48,10 +48,10 @@ class CategoryView extends StatelessWidget {
             pathParameters: {"categoryId": categoryResponseModel.docId});
       },
       child: CachedNetworkImageProviderWidget(
-        width: 50.w,
-        height: 40.h,
+        width: 60.w,
+        height: 30.h,
         fit: BoxFit.cover,
-        colorFilter: ColorFilter.mode(Colors.black.withOpacity(0.4), BlendMode.darken),
+        colorFilter: ColorFilter.mode(Colors.black.withOpacity(0.5), BlendMode.darken),
         backGroundColor:AppColors.white,
         imageUrl: categoryResponseModel.imageUrl ?? '',
         borderRadius: borderRadius,
@@ -62,7 +62,8 @@ class CategoryView extends StatelessWidget {
                         categoryResponseModel.imageUrl!.isEmpty
                     ? AppColors.lightGray6
                     : AppColors.white,
-                fontSize: 22.sp,
+
+                fontSize: 25.sp,
               ),
         ).wrapCenter(),
       ),
