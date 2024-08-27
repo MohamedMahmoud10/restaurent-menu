@@ -19,9 +19,8 @@ class AdditionalSubCategoryView extends StatelessWidget {
         subCategoryResponseModel.description(context.locale.languageCode);
 
     return Container(
-      padding: EdgeInsets.symmetric(vertical: 1.h,horizontal: 2.w),
-      margin: EdgeInsets.symmetric(vertical: 4.h,horizontal: 5.w),
-      width: Device.screenType==ScreenType.mobile?Adaptive.w(90):60.w,
+      padding: EdgeInsets.symmetric(vertical: 1.h,horizontal: 0.w),
+      width: Device.screenType==ScreenType.mobile?double.infinity:60.w,
       decoration: ShapeDecoration(
         color: AppColors.white,
         shape: RoundedRectangleBorder(
